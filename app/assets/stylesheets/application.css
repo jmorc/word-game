@@ -1,0 +1,317 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-color: #5C5C99;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  background: #99FF99;
+  color: #708B99;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+caption {
+  color: #708B99;
+  font-weight: bold;
+}
+
+.center-container {
+  display: inline-block;
+}
+
+.score-table {
+  float: left;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+}
+
+#main {
+  margin: 100px 50px auto auto;
+}
+
+div {
+  border-radius: 5px;
+}
+
+.newUserForm {
+  border-radius: 5px;
+  display: inline-block;
+  background: #708B99;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+}
+
+.letter-container {
+  display: inline-block;
+  background: #66CCFF;
+  list-style: none;
+  vertical-align: top;
+  height: 120px;
+}
+
+.letter, .letter-typed {
+  font-size: 48px;
+  font-weight: bold;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+}
+
+.letter {
+  background: #708B99;
+  color: white;
+}
+
+.letter-typed {
+  background: #99FF99;
+  color: #708B99;
+}
+
+.letter-new {
+  font-weight: bold;
+  float: left;
+  font-size: 48px;
+  margin: 10px;
+  padding: 20px;
+  background: #99FF99;
+  color: #708B99;
+
+  -webkit-animation: bouncein 0.2s cubic-bezier(.87,-.41,.19,1.44); /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: bouncein 0.2s cubic-bezier(.87,-.41,.19,1.44); /* Firefox < 16 */
+      -ms-animation: bouncein 0.2s cubic-bezier(.87,-.41,.19,1.44); /* Internet Explorer */
+       -o-animation: bouncein 0.2s cubic-bezier(.87,-.41,.19,1.44); /* Opera < 12.1 */
+          animation: bouncein 0.2s cubic-bezier(.87,-.41,.19,1.44);
+}
+
+@keyframes bouncein {
+    0% {   
+      font-size: 36px;
+    }
+    80% {   
+      font-size: 54px;
+    }
+    100% {   
+      font-size: 48px;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes bouncein {
+    0% {   
+      font-size: 36px;
+    }
+    80% {   
+      font-size: 54px;
+    }
+    100% {   
+      font-size: 48px;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes bouncein {
+    0% {   
+      font-size: 36px;
+    }
+    80% {   
+      font-size: 54px;
+    }
+    100% {   
+      font-size: 48px;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes bouncein {
+    0% {   
+      font-size: 36px;
+    }
+    80% {   
+      font-size: 54px;
+    }
+    100% {   
+      font-size: 48px;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes bouncein {
+    0% {   
+      font-size: 36px;
+    }
+    80% {   
+      font-size: 54px;
+    }
+    100% {   
+      font-size: 48px;
+    }
+}
+
+#timer-container {
+  display: inline-block;
+  background: #708B99;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 10px;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+.score-table {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 0px;
+  border-radius: 5px;
+  background: #66CCFF;
+  color: #ffffff;
+}
+
+.score-table table {
+  border-spacing: 2px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 2px;
+}
+
+th, td {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+.score-table tr:nth-child(odd){
+  background-color:#5c5c99;
+}
+
+.score-table tr:nth-child(even) {
+  background-color:#708b99;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  display: inline-block;
+  perspective: 1000;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(900deg);
+}
+
+.flip-container {
+  width: 100px;
+  height: 100px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 1s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.flip-container:hover .flipper, 
+.flip-container.hover .flipper, 
+.flip-container.flip .flipper {
+  transform: rotateY(900deg);
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  color: red;
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(900deg);
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}

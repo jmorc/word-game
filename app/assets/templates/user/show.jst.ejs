@@ -1,0 +1,11 @@
+<table>
+  <caption>Top 5 Players</caption>
+  <% for ( var i = 0; i < 5; i++ ) { %>
+    <% if ( users[i] ) { %> 
+      <tr>
+        <td><%= users[i].escape('name')%></td>
+        <td><%= users[i].escape('score')%></td>
+      </tr>
+    <% } %>
+  <% } %>
+</table>
