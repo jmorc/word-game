@@ -2,7 +2,7 @@ Play <b>Word Bonanza</b> at https://wordbonanza.herokuapp.com
 
 == Description
 
-The "stack" is Backbone and Rails.  I decided to use a Rails back-end because I wanted to persist the users to a database in order to have a leaderboard.  The wordnik api is also queried from the Rails side, and the resulting words are saved to the database.  The advantage of that is that it allows for "games" (collections of Wordnik words) to be saved.  So, in the future, I could add a feature where a user could come back to a saved game, the user can save a game and send a link it to their friend to play the saved game.
+The "stack" is Backbone and Rails.  I decided to use a Rails back-end because I wanted to persist the users to a database in order to have a leaderboard.  The wordnik api is also queried from the Rails side, and the resulting words are saved to the database.  The advantage of that is that it allows for "games" (collections of Wordnik words) to be saved.  So, in the future, I could add a feature where a user could come back to a saved game, or the user can save a game and send a link it to their friend to play the saved game.
 
 == What I Would Improve
 
