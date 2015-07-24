@@ -9,7 +9,7 @@ WordGame.Views.wordsNew = Backbone.View.extend({
                 var wordIdx = currentView.collection._currentWord;
                 currentView.collection
                            .models[ wordIdx ]
-                           .updateScramble(String.fromCharCode(e.keyCode));
+                           .updateScramble(String.fromCharCode(e.charCode));
                 currentView.render();
             }
         });
@@ -60,7 +60,7 @@ WordGame.Views.wordsNew = Backbone.View.extend({
     },
 
     startTimer: function(){
-        this.time = 30;
+        this.time = 60;
         $('#timer').text(this.time);
         this.timer = setInterval(function(){
             this.time -= 1;
