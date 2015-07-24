@@ -257,15 +257,15 @@ th, td {
   background-color:#708b99;
 }
 
-
-
 .flip-container {
   display: inline-block;
   -webkit-perspective: 1000;
+  perspective: 1000;
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {
   -webkit-transform: rotateY(900deg);
+  transform: rotateY(900deg);
 }
 
 .flip-container {
@@ -275,7 +275,9 @@ th, td {
 
 .flipper {
   -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   position: relative;
 }
 
@@ -283,10 +285,12 @@ th, td {
 .flip-container.hover .flipper, 
 .flip-container.flip .flipper {
   -webkit-transform: rotateY(900deg);
+  transform: rotateY(900deg);
 }
 
 .front, .back {
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -296,8 +300,10 @@ th, td {
   z-index: 2;
   color: red;
   -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .back {
   -webkit-transform: rotateY(900deg);
+  transform: rotateY(900deg);
 }
