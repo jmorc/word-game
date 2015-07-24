@@ -1,28 +1,7 @@
-== README
+== Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The "stack" is Backbone and Rails.  I decided to use a Rails back-end because I wanted to persist the users to a database in order to have a leaderboard.  The wordnik api is also queried from the Rails side, and the resulting words are saved to the database.  The advantage of that is that it allows for "games" (collections of Wordnik words) to be saved.  So, in the future, I could add a feature where a user could come back to a saved game, the user can save a game and send a link it to their friend to play the saved game.
 
-Things you may want to cover:
+== What I Would Improve
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+In addition to the game-saving feature, I would like to add responsive design to support phones and tablets, and the anagram support.  Beyond just anagrams, I would like to ad a feature where every "wrong" word that is entered  is checked against the wordnik API, to be sure it really isn't a word.  The game also needs some cool sound effects.
