@@ -1,4 +1,4 @@
-Play *Word Bonanza* at https://wordbonanza.herokuapp.com
+Play <b>Word Bonanza</b> at https://wordbonanza.herokuapp.com
 
 == Description
 
