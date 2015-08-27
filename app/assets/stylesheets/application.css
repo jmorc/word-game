@@ -42,14 +42,18 @@ caption {
   display: inline-block;
 }
 
+.directions {
+  border-radius: 5px;
+  display: block;
+  background: #708B99;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .score-table {
   float: left;
-
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 2s; /* Firefox < 16 */
-      -ms-animation: fadein 2s; /* Internet Explorer */
-       -o-animation: fadein 2s; /* Opera < 12.1 */
-          animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -111,6 +115,7 @@ div {
   list-style: none;
   vertical-align: top;
   height: 120px;
+  padding-right: 10px;
 }
 
 .letter, .letter-typed {
@@ -122,6 +127,9 @@ div {
 }
 
 .letter {
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
   background: #708B99;
   color: white;
 }
@@ -218,12 +226,6 @@ div {
   font-size: 20px;
   padding: 10px;
   margin-left: 10px;
-
-    /*-webkit-animation: fadein 2s;*/
-       /*-moz-animation: fadein 2s;*/
-        /*-ms-animation: fadein 2s;*/
-         /*-o-animation: fadein 2s;*/
-            /*animation: fadein 2s;*/
 }
 
 .score-table {
@@ -304,6 +306,7 @@ th, td {
 }
 
 .back {
+  width: 90px;
   -webkit-transform: rotateY(900deg);
   transform: rotateY(900deg);
 }

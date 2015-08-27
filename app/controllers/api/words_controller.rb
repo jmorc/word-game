@@ -7,7 +7,7 @@ class Api::WordsController < ApplicationController
 
     ids = Word.order('id DESC').limit(10).pluck(:id)
     @words = Word.where(id: ids)
-    sleep 3
+    sleep 0.5
     render json: @words
   end
 end

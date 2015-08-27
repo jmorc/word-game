@@ -3,6 +3,12 @@
 <br>
 <div class="center-container">
 
+  <% if ( flip ) { %>
+    <div class='directions'>
+       Type in the unscramled word
+    </div>
+  <% } %>
+
   <% if ( isLoading ) { %>
     <div class="loader">Loading...</div>
   <% } else { %>
