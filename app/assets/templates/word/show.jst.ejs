@@ -2,69 +2,74 @@
 <div id="new-user"></div>
 <br>
 <div class="center-container">
-  <div class="letter-container">
-      <% if ( word && word._scrambledWord ) { %>
-          <% var letters =  word._scrambledWord.split('') %>
 
-          <% if ( flip ) { %>
-            <% for (var i = 0; i < letters.length; i++ ) { %>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front letter">
-                    ★
-                  </div>
-                  <div class="back">
-                    <div class="letter"> <%=letters[i]%> </div>
+  <% if ( isLoading ) { %>
+    <div class="loader">Loading...</div>
+  <% } else { %>
+    <div class="letter-container">
+        <% if ( word && word._scrambledWord && !isLoading ) { %>
+            <% var letters =  word._scrambledWord.split('') %>
+
+            <% if ( flip ) { %>
+              <% for (var i = 0; i < letters.length; i++ ) { %>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front letter">
+                      ★
+                    </div>
+                    <div class="back">
+                      <div class="letter"> <%=letters[i]%> </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            <% } %>
-
-          <% } else { %>
-
-              <% for (var i = 0; i < letters.length; i++ ) { %>
-                <% if ( i > word._letterPosition - 1 ) { %>
-                    <div class="letter">
-                      <%=letters[i]%>
-                    </div>
-                <% } else if ( i === word._letterPosition - 1) { %>
-                    <div class="letter-new">
-                      <%=letters[i]%>
-                    </div>
-                <% } else { %>
-                    <div class="letter-typed">
-                      <%=letters[i]%>
-                    </div>
-                <% } %>
               <% } %>
-          <% } %>
-      <% } %>
-  </div>
 
-  <div id="timer-container">
-    Time Left: <div id="timer">--</div>
-  </div>
-  <br>
-  <% if ( wordIdx > 0 ) { %>
-    <div class="score-table">
-      <table>
-        <caption>Your Game</caption>
-        <tr>
-          <th>Word</th>
-          <th>Guess</th>
-          <th>Score</th>
-        </tr>
-      <% for ( var i = 0; i < wordIdx; i++ ) { %>
-        <tr>
-          <td><%=words[i].escape('word')%></td>
-          <td><%=words[i]._scrambledWord%></td>
-          <td><%=words[i].score%></td>
-        </tr>
-      <% } %>
-    </table>
-  </div>
+            <% } else { %>
+
+                <% for (var i = 0; i < letters.length; i++ ) { %>
+                  <% if ( i > word._letterPosition - 1 ) { %>
+                      <div class="letter">
+                        <%=letters[i]%>
+                      </div>
+                  <% } else if ( i === word._letterPosition - 1) { %>
+                      <div class="letter-new">
+                        <%=letters[i]%>
+                      </div>
+                  <% } else { %>
+                      <div class="letter-typed">
+                        <%=letters[i]%>
+                      </div>
+                  <% } %>
+                <% } %>
+            <% } %>
+        <% } %>
+    </div>
+
+    <div id="timer-container">
+      Time Left: <div id="timer">--</div>
+    </div>
+
+    <br>
+    <% if ( wordIdx > 0 ) { %>
+      <div class="score-table">
+        <table>
+          <caption>Your Game</caption>
+          <tr>
+            <th>Word</th>
+            <th>Guess</th>
+            <th>Score</th>
+          </tr>
+        <% for ( var i = 0; i < wordIdx; i++ ) { %>
+          <tr>
+            <td><%=words[i].escape('word')%></td>
+            <td><%=words[i]._scrambledWord%></td>
+            <td><%=words[i].score%></td>
+          </tr>
+        <% } %>
+      </table>
+    </div>
+  <% } %>
 <% } %>
-
 <div class='leaderboard score-table'></div>
 
 

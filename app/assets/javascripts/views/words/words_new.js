@@ -16,12 +16,12 @@ WordGame.Views.wordsNew = Backbone.View.extend({
         this.startTimer();
     },
 
+    _active: true,
+
     events: {
         'click .restart' : 'restart',
         'submit form.newUserForm' : 'submitNewUser'
     },
-
-    _active: true,
 
     gameOver: function() {
         this._active = false;
@@ -33,6 +33,20 @@ WordGame.Views.wordsNew = Backbone.View.extend({
         if ( this.sumScore() > WordGame.Collections.users.fifthScore() ) {
             var newUserView = new WordGame.Views.usersNew();
             newUserView.render();
+        }
+    },
+
+    handleModelLoading: function ( isLoading ) {
+        if ( isLoading ) {
+            console.log('hiding timer');
+            var timerContainer = document.getElementById('timer-container');
+            if ( timerContainer ) {
+                timerContainer.style.display = 'none';
+            }
+        } else {
+                        console.log('showing timer')
+
+            // document.getElementById('timer-container').style.display = 'block';
         }
     },
 
@@ -87,15 +101,22 @@ WordGame.Views.wordsNew = Backbone.View.extend({
     },
 
     render: function( options ) {
+        console.log('rendering')
         options = options || {};
         var wordIdx = this.collection._currentWord;
+
+        var isLoading = this.collection.models.length === 0 ? true : false;
+
         var content = this.template({
             words: this.collection.models,
             wordIdx: wordIdx,
-            flip: options.flip
+            flip: options.flip,
+            isLoading: isLoading
         });
 
         this.$el.html(content);
+
+
 
         if ( options.flip ) {
             setTimeout(function(){
@@ -108,6 +129,7 @@ WordGame.Views.wordsNew = Backbone.View.extend({
             collection: WordGame.Collections.users
         });
         usersShowView.render();
+
         return this;
     },
 });
