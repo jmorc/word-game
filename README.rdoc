@@ -2,8 +2,14 @@ Play <b>Word Bonanza</b> at https://wordbonanza.herokuapp.com
 
 == Description
 
-The "stack" is Backbone and Rails.  I decided to use a Rails back-end because I wanted to persist the users to a database in order to have a leaderboard.  The wordnik api is also queried from the Rails side, and the resulting words are saved to the database.  The advantage of that is that it allows for "games" (collections of Wordnik words) to be saved.  So, in the future, I could add a feature where a user could come back to a saved game, or the user can save a game and send a link it to their friend to play the saved game.
+Word Bonanza is a word unscrambling game.  The upon visiting the site, the player is presented with a scrambled word and must type in the unscrambled "solution."  The player has one minute to unscramble as many words as possible. High scoring players can put their name in the record book!  
 
-== What I Would Improve
+The application is built with Backbone.js and Rails. 
 
-In addition to the game-saving feature, I would like to add responsive design to support phones and tablets, and the anagram support.  Beyond just anagrams, I would like to ad a feature where every "wrong" word that is entered  is checked against the wordnik API, to be sure it really isn't a word.  The game also needs some cool sound effects.
+=== Features
+- <b>Consumes the Wordnik API</b> to create collections of words.  Wordnik is queried by the Rails back-end, and words are passed to the front-end as Backbone.js collections.
+
+- <b>CSS 3D Transforms</b> for visual impact.
+
+
+
